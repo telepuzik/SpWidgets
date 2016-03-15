@@ -422,6 +422,7 @@
     <Content Include="images\officemap.png" />
     <Content Include="images\structure.png" />
     <Content Include="index.html" />
+    <Content Include="index_test.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -457,6 +458,7 @@
     <Content Include="scripts\lib\jssor\jssor.js" />
     <Content Include="scripts\lib\jssor\jssor.slider.min.js" />
     <Content Include="scripts\lib\require\require_2.1.15.js" />
+    <Content Include="scripts\testshow.js" />
     <Content Include="scripts\lib\widgets\wg_all.js" />
     <Content Include="scripts\lib\widgets\wg_photos.js" />
     <Content Include="scripts\lib\widgets\wg_structure.js" />

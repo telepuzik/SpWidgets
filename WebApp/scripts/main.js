@@ -13,6 +13,7 @@ require.config({
 
 require(['jquery', 'jqueryui'], function( $ ) {
     require(['bootstrap', 'metro'], function( $ ) {
+        LoadTestShow();
         LoadWidgets();
     });
 });

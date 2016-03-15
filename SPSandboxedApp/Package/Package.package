@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package dslVersion="1.0.0.0" 
-        Id="5b03f517-4094-42cc-ad9a-6581c7c1731b" 
-        solutionId="5b03f517-4094-42cc-ad9a-6581c7c1731b" 
-        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
-        name="SPSandboxedApp"
-        sharePointProductVersion="15.0">
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="5b03f517-4094-42cc-ad9a-6581c7c1731b" solutionId="5b03f517-4094-42cc-ad9a-6581c7c1731b" resetWebServer="false" sharePointProductVersion="15.0" name="SPSandboxedApp" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="b79724f8-5197-42c0-abf7-7fde0e5a17ca" />
+  </features>
 </package>

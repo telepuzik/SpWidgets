@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: #714581;
+    /*background-color: #714581;*/
 }
 
 .container {
@@ -227,3 +227,5 @@ a.captionOrange:hover
     -o-transition: none;
 }
 /*slider*/
+
+
