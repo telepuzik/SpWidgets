@@ -429,7 +429,10 @@
     <Content Include="Layouts\SPFarmApp\scripts\lib\jssor\jssor.js" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\jssor\jssor.slider.min.js" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\require\require_2.1.15.js" />
+    <Content Include="Layouts\SPFarmApp\scripts\lib\sp\sp_helper.js" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\widgets\wg_all.js" />
+    <Content Include="Layouts\SPFarmApp\scripts\lib\widgets\wg_helper.js" />
+    <Content Include="Layouts\SPFarmApp\scripts\lib\widgets\wg_listitems.js" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\widgets\wg_photos.js" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\widgets\wg_structure.js" />
     <Content Include="Layouts\SPFarmApp\scripts\main.js" />

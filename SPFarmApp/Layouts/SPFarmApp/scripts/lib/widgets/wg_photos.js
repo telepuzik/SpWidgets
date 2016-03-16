@@ -25,15 +25,19 @@ function WgPhotosCreate (element){
     });
 }
 
-function CreatePhotosSlider (element){
-    var slider = "<div id='slider2_container' style='padding: 0px 0px 0px 0px; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; margin: 0 auto !important; '> \
+function CreatePhotosSlider(element) {
+    require(['jssormain', 'jssorslider'], function() {
+        var slider = "<div id='slider2_container' style='padding: 0px 0px 0px 0px; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; margin: 0 auto !important; '> \
     <div u='loading' style='position: absolute; top: 0px; left: 0px;'><div style='filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block; background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;'></div><div style='position: absolute; display: block; background: url('/_Layouts/15/SPFarmApp/images/img/loading.gif') no-repeat center center; top: 0px; left: 0px;width: 100%;height:100%;'></div></div>\
     <div u='slides' style='cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px; overflow: hidden;'><div><img u='image' src='/_Layouts/15/SPFarmApp/images/img/photography/002.jpg' /><img u='thumb' src='/_Layouts/15/SPFarmApp/images/img/photography/thumb-002.jpg' /></div> <div><img u='image' src='/_Layouts/15/SPFarmApp/images/img/photography/003.jpg' /><img u='thumb' src='/_Layouts/15/SPFarmApp/images/img/photography/thumb-003.jpg' /></div>\
     <div><img u='image' src='/_Layouts/15/SPFarmApp/images/img/photography/004.jpg' /><img u='thumb' src='/_Layouts/15/SPFarmApp/images/img/photography/thumb-004.jpg' /></div><div><img u='image' src='/_Layouts/15/SPFarmApp/images/img/photography/005.jpg' /><img u='thumb' src='/_Layouts/15/SPFarmApp/images/img/photography/thumb-005.jpg' /></div><div><img u='image' src='/_Layouts/15/SPFarmApp/images/img/photography/006.jpg' /><img u='thumb' src='/_Layouts/15/SPFarmApp/images/img/photography/thumb-006.jpg' /></div><div><img u='image' src='/_Layouts/15/SPFarmApp/images/img/photography/007.jpg' /><img u='thumb' src='/_Layouts/15/SPFarmApp/images/img/photography/thumb-007.jpg' /></div>\
     <div><img u='image' src='/_Layouts/15/SPFarmApp/images/img/photography/008.jpg' /><img u='thumb' src='/_Layouts/15/SPFarmApp/images/img/photography/thumb-008.jpg' /></div><div><img u='image' src='/_Layouts/15/SPFarmApp/images/img/photography/009.jpg' /><img u='thumb' src='/_Layouts/15/SPFarmApp/images/img/photography/thumb-009.jpg' /></div><div><img u='image' src='/_Layouts/15/SPFarmApp/images/img/photography/010.jpg' /><img u='thumb' src='/_Layouts/15/SPFarmApp/images/img/photography/thumb-010.jpg' /></div><div><img u='image' src='/_Layouts/15/SPFarmApp/images/img/photography/011.jpg' /><img u='thumb' src='/_Layouts/15/SPFarmApp/images/img/photography/thumb-011.jpg' /></div></div>\
     <span u='arrowleft' class='jssora02l' style='width: 55px; height: 55px; top: 123px; left: 8px;'></span><span u='arrowright' class='jssora02r' style='width: 55px; height: 55px; top: 123px; right: 8px'></span><div u='thumbnavigator' class='jssort03' style='position: absolute; width: 600px; height: 60px; left:0px; bottom: 0px;'><div style=' background-color: #000; filter:alpha(opacity=30); opacity:.3; width: 100%; height:100%;'></div><div u='slides' style='cursor: move;'><div u='prototype' class='p' style='POSITION: absolute; WIDTH: 62px; HEIGHT: 32px; TOP: 0; LEFT: 0;'><div class=w><div u='thumbnailtemplate' style=' WIDTH: 100%; HEIGHT: 100%; border: none;position:absolute; TOP: 0; LEFT: 0;'></div></div><div class=c style='POSITION: absolute; BACKGROUND-COLOR: #000; TOP: 0; LEFT: 0'></div></div></div></div><a style='display: none' href='http://www.jssor.com'>bootstrap carousel</a></div>";
 
-    element.html(slider);
+        element.html(slider);
+
+        LoadPhotos(this.element);
+    });   
 }
 
 function LoadPhotos () {

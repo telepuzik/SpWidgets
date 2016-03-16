@@ -1,7 +1,4 @@
-/**
- * Created by IMELNIKOV on 15.12.2014.
- */
-require.config({
+﻿require.config({
     baseUrl: '/_Layouts/15/SPFarmApp/scripts/lib/',
     paths: {
         jquery: 'jquery/jquery-1.11.1',
@@ -14,127 +11,104 @@ require.config({
 require(['jquery', 'jqueryui'], function( $ ) {
     require(['bootstrap', 'metro'], function( $ ) {
         LoadTestShow();
-        LoadWidgets();
+        SP.SOD.executeFunc('SP.js', 'SP.ClientContext', LoadWidgets);
     });
 });
 
-function LoadWidgets (){
-    $(".structure").each(function (){
-        var element = $(this);
-        require(['widgets/wg_structure'], function() {
-            WgStructureCreate(element);
-        });
-    });
+function LoadWidgets() {
+    require(['widgets/wg_helper', 'jquery', 'jqueryui'], function () {
+        //init
+        var wgHelper = new Widgets();
+        wgHelper.Initialization();
 
-    $(".blogs").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgBlogsCreate(element);
+        //
+        $(".structure").each(function () {
+            $(this).structure({ name: "Структура компании" });
         });
-    });
-
-    $(".hooray").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgHoorayCreate(element);
+        
+        //
+        $(".blogs").each(function() {
+            $(this).blogs({ name: "Блоги" });
         });
-    });
 
-    $(".myprofile").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgMyprofileCreate(element);
+        //
+        $(".listitems").each(function () {
+            $(this).listitems({ name: "listitems" });
         });
-    });
 
-    $(".interview").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgInterviewCreate(element);
+        //
+        $(".hooray").each(function () {
+            $(this).hooray({ name: "Ура и спасибо" });
         });
-    });
 
-    $(".officemap").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgOfficemapCreate(element);
+        //
+        $(".myprofile").each(function () {
+            $(this).myprofile({ name: "Мой профиль" });
         });
-    });
 
-    $(".photos").each(function (){
-        var element = $(this);
-        require(['widgets/wg_photos'], function() {
-            WgPhotosCreate(element);
+        //
+        $(".interview").each(function () {
+            $(this).interview({ name: "Опросы" });
         });
-    });
 
-    $(".events").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgEventsCreate(element);
+        //
+        $(".officemap").each(function () {
+            $(this).officemap({ name: "Карта офиса" });
         });
-    });
 
-    $(".newemployees").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgNewemployeesCreate(element);
+        //
+        $(".photos").each(function () {
+            $(this).photos({ name: "Фотографии" });
         });
-    });
 
-    $(".birthdays").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgBirthdaysCreate(element);
+        //
+        $(".events").each(function () {
+            $(this).events({ name: "События" });
         });
-    });
 
-    $(".ideas").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgIdeasCreate(element);
+        //
+        $(".newemployees").each(function () {
+            $(this).newemployees({ name: "Новые сотрудники" });
         });
-    });
 
-    $(".note").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgNoteCreate(element);
+        //
+        $(".birthdays").each(function () {
+            $(this).birthdays({ name: "Дни рождения" });
         });
-    });
 
-    $(".facebook").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgFacebookCreate(element);
+        //
+        $(".ideas").each(function () {
+            $(this).ideas({ name: "Идеи" });
         });
-    });
 
-    $(".job").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgJobCreate(element);
+        //
+        $(".note").each(function () {
+            $(this).note({ name: "Памятка" });
         });
-    });
 
-    $(".neighbors").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgNeighborsCreate(element);
+        //
+        $(".facebook").each(function () {
+            $(this).facebook({ name: "Соцсети" });
         });
-    });
 
-    $(".portal").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgPortalCreate(element);
+        //
+        $(".job").each(function () {
+            $(this).job({ name: "Вакансии" });
         });
-    });
 
-    $(".services").each(function (){
-        var element = $(this);
-        require(['widgets/wg_all'], function() {
-            WgServicesCreate(element);
+        //
+        $(".neighbors").each(function () {
+            $(this).neighbors({ name: "Соседи" });
+        });
+
+        //
+        $(".portal").each(function () {
+            $(this).portal({ name: "Портал" });
+        });
+
+        //
+        $(".services").each(function () {
+            $(this).services({ name: "Сервисы" });
         });
     });
 }
