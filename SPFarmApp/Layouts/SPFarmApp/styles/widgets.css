@@ -1,16 +1,3 @@
-.col-md-2, .col-md-4, .col-md-6, .col-md-8, .col-md-12 {
-    /*padding-left: 10px !important;*/
-    /*padding-right: 10px !important;*/
-
-}
-
-.row {
-
-}
-
-body{
-    /*background-color: #714581;*/
-}
 /*bootstrap resets for SharePoint*/
 *, *:before, *:after {
 	-moz-box-sizing: content-box; /*border-box causes many issues with SP*/
@@ -61,6 +48,7 @@ label {
 }
 /*end bootstrap resets*/
 
+
 /*Bootstrap Fix*/
 
 *, *:before, *:after {
@@ -68,7 +56,7 @@ label {
 -moz-box-sizing: content-box; /*border-box causes many issues with SP*/
 box-sizing: content-box; /*border-box causes many issues with SP*/
 }
-* [class^=”span”], * [class^=”span”]:before, * [class^=”span”]:after {
+* [class^='span'], * [class^='span']:before, * [class^='span']:after {
 -webkit-box-sizing: border-box; /*re-enable border-box for framework spans*/
 -moz-box-sizing: border-box; /*re-enable border-box for framework spans*/
 box-sizing: border-box; /*re-enable border-box for framework spans*/
@@ -77,7 +65,7 @@ img {
 max-width: none;
 width: auto;
 }
-* [class^=”span”] img {
+* [class^='span'] img {
 max-width: 100%; /*for images inside span grid*/
 }
 #scriptWPQ2 img, img.ms-webpart-menuArrowImg, #applist img {
@@ -97,6 +85,13 @@ margin: 0px;
 box-sizing: border-box; /*border-box causes many issues with SP*/
 }
 /**/
+
+a.ms-cui-tt-a:hover, a.ms-cui-tt-a:focus {
+text-decoration: none    
+}
+
+
+
 
 h2, h3, .ms-h2, .ms-h3, .ms-headerFont {
          font-weight: 300; 
@@ -331,5 +326,19 @@ table.items {
     /*height: 100%;*/
 }
 
-table.items tr {
+table.items td {
+    font-size: 13pt;
+    padding-bottom: 6px;
+}
+
+table.items th {
+    font-size: 13pt;
+}
+
+div.description {
+    padding-bottom: 15px;
+}
+
+div.description > a {
+    font-size: 15pt; 
 }

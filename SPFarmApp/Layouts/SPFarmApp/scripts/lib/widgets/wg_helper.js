@@ -40,11 +40,9 @@ Widgets.prototype.Initialization = function () {
                 .append("<div style='height: 80px'><a href=''/'><img style='float:left' src='/_Layouts/15/SPFarmApp/images/blogs_1.png' alt=''></a><a href='' style='font-size: 14pt;'>Маленькие праздники без повода</a><br/><a href='' style='font-size: 10pt;'>Пост для того, чтобы не забыть то, что мы тут только что обсуждали...</a></div>")
                 .append("<div style='height: 80px'><a href=''/'><img style='float:left' src='/_Layouts/15/SPFarmApp/images/blogs_2.png' alt=''></a><a href='' style='font-size: 14pt;'>Нас ломанули?</a><br/><a href='' style='font-size: 10pt;'>'Если Вас съели - есть два выхода'</a></div>")
                 .click(function () {
-                    alert("Calm down. Nothing to see here.");
+                   
                 });
-            require(['widgets/wg_listitems'], function () {
-                CreateListItemsForm(currentElement);
-            });
+            CreateListItemsForm(currentElement);
         }
     });
 

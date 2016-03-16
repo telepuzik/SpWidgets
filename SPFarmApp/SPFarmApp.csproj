@@ -414,6 +414,8 @@
     <Content Include="Layouts\SPFarmApp\scripts\ai.0.15.0-build58334.js" />
     <Content Include="Layouts\SPFarmApp\scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Layouts\SPFarmApp\scripts\EmptyWidget.js" />
+    <Content Include="Layouts\SPFarmApp\scripts\lib\bootstrap\bootstrap-custom.css" />
+    <Content Include="Layouts\SPFarmApp\scripts\lib\bootstrap\bootstrap.min.css" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\bootstrap\css\bootstrap.css" />
@@ -439,6 +441,7 @@
     <Content Include="Layouts\SPFarmApp\scripts\onload.js" />
     <Content Include="Layouts\SPFarmApp\scripts\require_wg.js" />
     <Content Include="Layouts\SPFarmApp\scripts\testshow.js" />
+    <Content Include="Layouts\SPFarmApp\styles\sharepoint2013-bootstrap3-reset.css" />
     <Content Include="Layouts\SPFarmApp\styles\widgets.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

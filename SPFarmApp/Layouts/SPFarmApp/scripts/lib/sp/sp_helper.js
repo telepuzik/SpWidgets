@@ -1,9 +1,9 @@
-﻿var SpHelper = function (window) {
+﻿var SpLittleHelper = function (window) {
     this.window = window;
 };
 
 //Вернет splistitemcollection всех элементов
-SpHelper.prototype.LoadListItems = function (listName, userQuery) {
+SpLittleHelper.prototype.LoadListItems = function (listName, userQuery) {
     //jquery promise
     var d = $.Deferred();
 
@@ -26,12 +26,12 @@ SpHelper.prototype.LoadListItems = function (listName, userQuery) {
 };
 
 //Вернет splistitemcollection всех элементов
-SpHelper.prototype.onQuerySucceededLoadListItems = function () {
+SpLittleHelper.prototype.onQuerySucceededLoadListItems = function () {
     var listItems = this.listItems.getEnumerator();
     this.d.resolve(listItems);
 }
 
 //отработка ошибки загрузки
-SpHelper.prototype.onQueryFailed = function (sender, args) {
+SpLittleHelper.prototype.onQueryFailed = function (sender, args) {
     console.log('Ошибка загрузки данных. ' + args.get_message() + '\n' + args.get_stackTrace());
 }

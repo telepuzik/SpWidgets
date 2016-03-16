@@ -30,12 +30,24 @@
     
     
 
-    <script type="text/javascript" data-main="/_Layouts/15/SPFarmApp/scripts/main" src="/_Layouts/15/SPFarmApp/scripts/lib/require/require_2.1.15.js"></script>
+   <%-- <script type="text/javascript" data-main="/_Layouts/15/SPFarmApp/scripts/main" src="/_Layouts/15/SPFarmApp/scripts/lib/require/require_2.1.15.js"></script>--%>
+    <SharePoint:ScriptLink ID="ScriptLink90" Language="javascript" Name="/_Layouts/15/SPFarmApp/scripts/lib/jquery/jquery-1.11.1.js" Defer="true" runat="server" />
+    <SharePoint:ScriptLink ID="ScriptLink100" Language="javascript" Name="/_Layouts/15/SPFarmApp/scripts/main.js" Defer="true" runat="server" />
+    <%--<script src="/_Layouts/15/SPFarmApp/scripts/lib/jquery/jquery-1.11.1.js"></script>--%>
+    <script src="/_Layouts/15/SPFarmApp/scripts/lib/jqueryui/jquery-ui.js"></script>
+    <script src="/_Layouts/15/SPFarmApp/scripts/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/_Layouts/15/SPFarmApp/scripts/lib/jquery/metro/metro.min.js"></script>
+    <script src="/_Layouts/15/SPFarmApp/scripts/lib/widgets/wg_helper.js"></script>
+    <script src="/_Layouts/15/SPFarmApp/scripts/lib/widgets/wg_listitems.js"></script>
+    <script src="/_Layouts/15/SPFarmApp/scripts/lib/widgets/wg_photos.js"></script>
+    <%--<script src="/_Layouts/15/SPFarmApp/scripts/main.js"></script>--%>
     <script src="/_Layouts/15/SPFarmApp/scripts/testshow.js"></script>
+    <script src="/_Layouts/15/SPFarmApp/scripts/lib/sp/sp_helper.js"></script>
+
     <link href="/_Layouts/15/SPFarmApp/scripts/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/_Layouts/15/SPFarmApp/scripts/lib/jquery/metro/metro-bootstrap.min.css" rel="stylesheet" />
     <link href="/_Layouts/15/SPFarmApp/styles/widgets.css" rel="stylesheet" />
-    
+    <%--<link href="/_Layouts/15/SPFarmApp/styles/sharepoint2013-bootstrap3-reset.css" rel="stylesheet" />--%>
     
 
 	<SharePoint:CustomJSUrl runat="server" />

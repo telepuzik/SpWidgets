@@ -1,36 +1,38 @@
 ﻿function CreateListItemsForm(currentElement) {
     console.log("initialized" + currentElement.attr("class"));
 
-    require(['sp/sp_helper'], function() {
-        var spHelper = new SpHelper(this);
-        var getItems = spHelper.LoadListItems("ВЖД", "<View><Query><Where>" +
-                        "</Where>" +
-                        "<OrderBy><FieldRef Name='Created' Ascending='False' /></OrderBy>" +
-                        "</Query></View>");
+    var spHelper = new SpLittleHelper(this);
+    var getItems = spHelper.LoadListItems("ВЖД", "<View><RowLimit>5</RowLimit><Query><Where>" +
+                    "</Where>" +
+                    "<OrderBy><FieldRef Name='Created' Ascending='False' /></OrderBy>" +
+                    "</Query></View>");
 
-        //отрисовка таблицы
-        getItems.done(function (listItems) {
-            currentElement.empty();
-            var table = $("<table class='items'/>");
-            table.append("<tr><th class='ObjectColumn'>Tets</th><th>Диспетчер</th><th>Количество персонала на смене</th><th>Текущая смена</th></tr>");
+    //отрисовка таблицы
+    getItems.done(function (listItems) {
+        currentElement.empty();
+        currentElement.append("<div class='description'><a href=''>Последние записи ВЖД</a></div>");
+        var table = $("<table class='items'/>");
+        table.append("<tr><th class=''>Время события</th><th>Филиал</th><th>Сообщение</th><th>Диспетчер</th></tr>");
 
-            listItems.reset();
+        listItems.reset();
 
-            while (listItems.moveNext()) {
-                var currentItem = listItems.get_current();
+        while (listItems.moveNext()) {
+            var currentItem = listItems.get_current();
 
-                if (currentItem != null) {
-                    var tr = $("<tr/>");
-                    tr.append("<td>" + currentItem.get_item('Title') + "</td>" +
-                        "<td>" + currentItem.get_item('Title') + "</td>" +
-                        "<td>" + currentItem.get_item('Title') + "</td>" +
-                        "<td>" + currentItem.get_item('Title') + "</td>");
-                    table.append(tr);
-                }
+            if (currentItem != null) {
+                var date = new Date(currentItem.get_item('EventTime'));
+                var thisSite = window.location.protocol + '//' + window.location.host;
+                var url = thisSite + "/Lists/VJDListInstance/DispForm.aspx?ContentTypeId=" + currentItem.get_item("ContentTypeId") + "&ID=" + currentItem.get_item("ID");
+                var tr = $("<tr/>");
+                tr.append("<td>" + date.format("HH:MM dd.mm.yyyy") + "</td>" +
+                    "<td>" + currentItem.get_item('Object') + "</td>" +
+                    "<td><a href='" + url + "' target='_blank'>" + currentItem.get_item("Title") + "</a></td>" +
+                    "<td>" + currentItem.get_item('Dispatcher') + "</td>");
+                table.append(tr);
             }
-            currentElement.append(table);
+        }
+        currentElement.append(table);
 
-        });
     });
 
     
