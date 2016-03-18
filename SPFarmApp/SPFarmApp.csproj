@@ -87,6 +87,7 @@
     <Content Include="Layouts\SPFarmApp\images\blogs_2.png" />
     <Content Include="Layouts\SPFarmApp\images\blogs_3.png" />
     <Content Include="Layouts\SPFarmApp\images\clouds2.png" />
+    <Content Include="Layouts\SPFarmApp\images\exchangebutton.png" />
     <Content Include="Layouts\SPFarmApp\images\hooray.png" />
     <Content Include="Layouts\SPFarmApp\images\img\1920\blue.jpg" />
     <Content Include="Layouts\SPFarmApp\images\img\1920\purple.jpg" />
@@ -433,9 +434,11 @@
     <Content Include="Layouts\SPFarmApp\scripts\lib\require\require_2.1.15.js" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\sp\sp_helper.js" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\widgets\wg_all.js" />
+    <Content Include="Layouts\SPFarmApp\scripts\lib\widgets\wg_exchangelist.js" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\widgets\wg_helper.js" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\widgets\wg_listitems.js" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\widgets\wg_photos.js" />
+    <Content Include="Layouts\SPFarmApp\scripts\lib\widgets\wg_reportslist.js" />
     <Content Include="Layouts\SPFarmApp\scripts\lib\widgets\wg_structure.js" />
     <Content Include="Layouts\SPFarmApp\scripts\main.js" />
     <Content Include="Layouts\SPFarmApp\scripts\onload.js" />

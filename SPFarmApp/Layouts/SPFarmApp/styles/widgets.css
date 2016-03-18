@@ -86,15 +86,25 @@ box-sizing: border-box; /*border-box causes many issues with SP*/
 }
 /**/
 
-a.ms-cui-tt-a:hover, a.ms-cui-tt-a:focus {
+a.ms-cui-tt-a:hover, a.ms-cui-tt-a:focus, a.ms-cui-ctl-a2:hover, 
+a.ms-cui-disabled:hover, a.ms-cui-ctl-large:hover, a.ms-core-menu-link {
 text-decoration: none    
 }
 
 
 
+div.main {
+    width: 100% !important;
+    height: 100%;
+    background-color: #0071C6; 
+    position: absolute;
+    z-index: 100;
+    display:none 
+}
 
 h2, h3, .ms-h2, .ms-h3, .ms-headerFont {
-         font-weight: 300; 
+         font-weight: 300;
+    font-size: inherit;
 }
 
 
@@ -138,6 +148,10 @@ h2, h3, .ms-h2, .ms-h3, .ms-headerFont {
     background-color: #92a840 !important;
 }
 
+.widget.reportslist {
+    background-color: #92a840 !important;
+}
+
 .widget.listitems {
     background-color: #92a840 !important;
 }
@@ -146,12 +160,16 @@ h2, h3, .ms-h2, .ms-h3, .ms-headerFont {
     background-color: #477aa0 !important;
 }
 
+.widget.exchangelist {
+    background-color: #477aa0 !important;
+}
+
 .widget.myprofile {
     padding: 0px 0px 0px 0px !important;
     background-color: #92a840 !important;
-    background: url("../images/myprofile.png") no-repeat;
+    background: url("../images/myprofile.png") no-repeat center;
     background-position: top 0px;
-    background-size: cover;
+    background-size: 80px;
 }
 
  .widget.interview {
@@ -161,6 +179,12 @@ h2, h3, .ms-h2, .ms-h3, .ms-headerFont {
 .widget.officemap {
     background-color: #6f2162 !important;
     background: url("../images/officemap.png") no-repeat center;
+}
+
+.widget.exchangebutton {
+    background-color: #6f2162 !important;
+    background: url("../images/exchangebutton.png") no-repeat center;
+    background-size: 90px;
 }
 
 .widget.photos {
@@ -327,18 +351,29 @@ table.items {
 }
 
 table.items td {
-    font-size: 13pt;
+    font-size: 9pt;
     padding-bottom: 6px;
+    vertical-align: top;
+}
+
+table.items td > a {
+    font-size: 9pt;
+    /*text-decoration: underline;*/ 
 }
 
 table.items th {
-    font-size: 13pt;
+    font-size: 10pt;
 }
 
 div.description {
-    padding-bottom: 15px;
+    padding-bottom: 11px;
 }
 
 div.description > a {
-    font-size: 15pt; 
+    font-size: 12pt;
+    
+}
+
+td.message {
+    width: 40%;
 }

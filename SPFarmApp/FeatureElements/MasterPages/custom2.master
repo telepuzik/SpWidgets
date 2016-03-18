@@ -39,7 +39,9 @@
     <script src="/_Layouts/15/SPFarmApp/scripts/lib/jquery/metro/metro.min.js"></script>
     <script src="/_Layouts/15/SPFarmApp/scripts/lib/widgets/wg_helper.js"></script>
     <script src="/_Layouts/15/SPFarmApp/scripts/lib/widgets/wg_listitems.js"></script>
+    <script src="/_Layouts/15/SPFarmApp/scripts/lib/widgets/wg_exchangelist.js"></script>
     <script src="/_Layouts/15/SPFarmApp/scripts/lib/widgets/wg_photos.js"></script>
+    <script src="/_Layouts/15/SPFarmApp/scripts/lib/widgets/wg_reportslist.js"></script>
     <%--<script src="/_Layouts/15/SPFarmApp/scripts/main.js"></script>--%>
     <script src="/_Layouts/15/SPFarmApp/scripts/testshow.js"></script>
     <script src="/_Layouts/15/SPFarmApp/scripts/lib/sp/sp_helper.js"></script>
@@ -368,14 +370,14 @@
 		<div id="s4-bodyContainer">
 		
             
-<div class="main" style="width: 100% !important; height: 100%; background-color: #0071C6; position: absolute;z-index: 100; display:none ">            
-    <div class="container metro" style="width: 80% !important; background-color: #0071C6; ">
+<div class="main" style="">            
+    <div class="container metro" style="width: 90% !important; background-color: #0071C6; ">
         <div class="row">
             <div class="col-md-6" style="padding-left: 5px; padding-right: 5px;">
                 <div class="tile webpart listitems" style="height: 250px"></div>
             </div>
             <div class="col-md-4" style="padding-left: 5px;">
-                 <div class="tile webpart hooray" style="height: 250px"></div>
+                 <div class="tile webpart exchangelist" style="height: 250px"></div>
             </div>
             <div class="col-md-2" style="padding-left: 5px;">
                 <div class="row">
@@ -385,7 +387,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12" style="padding-left: 5px; padding-right: 5px">
-                        <div class="tile webpart officemap"></div>
+                        <div class="tile webpart exchangebutton"></div>
                     </div>
                 </div>
             </div>
@@ -393,7 +395,7 @@
 
         <div class="row">
             <div class="col-md-6" style="padding-left: 5px; padding-right: 5px">
-                <div class="tile webpart blogs" style="height: 250px"></div>
+                <div class="tile webpart reportslist" style="height: 250px"></div>
             </div>
             <div class="col-md-6" style="padding-left: 5px; padding-right: 5px">
                 <div class="row">
@@ -412,13 +414,13 @@
 
         <div class="row">
             <div class="col-md-2" style="padding-left: 5px; padding-right: 5px">
-                <div class="tile webpart job"></div>
+                <div class="tile webpart services"></div>
             </div>
             <div class="col-md-2" style="padding-left: 5px; padding-right: 5px">
-                <div class="tile webpart neighbors"></div>
+                <div class="tile webpart services"></div>
             </div>
             <div class="col-md-2" style="padding-left: 5px; padding-right: 5px">
-                <div class="tile webpart portal"></div>
+                <div class="tile webpart services"></div>
             </div>
             <div class="col-md-2" style="padding-left: 5px; padding-right: 5px">
                 <div class="tile webpart services"></div>
@@ -433,13 +435,13 @@
 
         <div class="row">
             <div class="col-md-2" style="padding-left: 5px; padding-right: 5px">
-                <div class="tile webpart job"></div>
+                <div class="tile webpart services"></div>
             </div>
             <div class="col-md-2" style="padding-left: 5px; padding-right: 5px">
-                <div class="tile webpart neighbors"></div>
+                <div class="tile webpart services"></div>
             </div>
             <div class="col-md-2" style="padding-left: 5px; padding-right: 5px">
-                <div class="tile webpart portal"></div>
+                <div class="tile webpart services"></div>
             </div>
             <div class="col-md-2" style="padding-left: 5px; padding-right: 5px">
                 <div class="tile webpart services"></div>

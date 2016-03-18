@@ -31,8 +31,13 @@ function LoadTest() {
     });
 
     //
+    $(".exchangelist").each(function () {
+        $(this).exchangelist({ name: "exchangelist" });
+    });
+
+    //
     $(".hooray").each(function () {
-        $(this).hooray({ name: "Ура и спасибо" });
+        $(this).hooray({ name: "Текущие смены" });
     });
 
     //
@@ -48,6 +53,16 @@ function LoadTest() {
     //
     $(".officemap").each(function () {
         $(this).officemap({ name: "Карта офиса" });
+    });
+
+    //
+    $(".exchangebutton").each(function () {
+        $(this).exchangebutton({ name: "Принять смену" });
+    });
+
+    //
+    $(".reportslist").each(function () {
+        $(this).reportslist({ name: "Список отчетов" });
     });
 
     //
@@ -121,9 +136,11 @@ function LoadTestShow() {
     $("a.windows_button").click(function (e) {
         //runEffect();
         if ($(".main").is(":visible")) {
+            $("#contentRow").show();
             $(".main").hide();
         } else {
             $(".main").show();
+            $("#contentRow").hide();
         }
         e.preventDefault();
     });
