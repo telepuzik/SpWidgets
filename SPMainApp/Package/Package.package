@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="146af9d8-3536-4b0b-b30b-a9c70fca350b" 
+        solutionId="146af9d8-3536-4b0b-b30b-a9c70fca350b" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="SPMainApp"
+        sharePointProductVersion="15.0">
+</package>
