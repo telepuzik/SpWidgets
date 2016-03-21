@@ -12,7 +12,7 @@
         currentElement.empty();
         currentElement.append("<div class='description'><a href=''>Последние отчеты</a></div>");
         var table = $("<table class='items'/>");
-        table.append("<tr><th class=''>Время события</th><th>Филиал</th><th>Сообщение</th><th>Диспетчер</th></tr>");
+        table.append("<tr><th class=''>Время события</th><th>Наименование отчета</th><th>Диспетчер</th></tr>");
 
         listItems.reset();
 
@@ -30,8 +30,8 @@
                 var tr = $("<tr/>");
                 tr.append("<td>" + date.format("HH:MM dd.mm.yyyy") + "</td>" +
                     "<td>" + currentItem.get_item("FileLeafRef") + "</td>" +
-                    "<td class='message'><a href='' target='_blank'>" + message + "</a></td>" +
-                    "<td>" + currentItem.get_item('Title') + "</td>");
+                    //"<td class='message'><a href='' target='_blank'>" + message + "</a></td>" +
+                    "<td>" + currentItem.get_item('Author').get_lookupValue() + "</td>");
                 table.append(tr);
             }
         }
