@@ -70,12 +70,6 @@
     <None Include="Layouts\SPFarmApp\scripts\lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <None Include="Layouts\SPFarmApp\scripts\lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="Layouts\SPFarmApp\scripts\lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <None Include="Package\Package.package">
-      <PackageId>{9783c8e8-74b0-426f-af8e-a2cc2ecc1a73}</PackageId>
-    </None>
-    <None Include="Package\Package.Template.xml">
-      <DependentUpon>Package.package</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
