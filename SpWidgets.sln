@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPFarmApp", "SPFarmApp\SPFa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMainApp", "SPMainApp\SPMainApp.csproj", "{808726C5-4D3C-45B3-B50D-97C6523ABD32}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "materials", "materials", "{5C2308D3-6AA8-4629-A37B-22F0EC0645A5}"
+	ProjectSection(SolutionItems) = preProject
+		materials\script.ps1 = materials\script.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
