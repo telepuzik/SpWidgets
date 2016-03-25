@@ -370,7 +370,7 @@
 		<div id="s4-bodyContainer">
 		
             
-<div class="main" style="">            
+<div class="main" style="display:none">            
     <div class="container metro" style="width: 90% !important; background-color: #0071C6; ">
         <div class="row">
             <div class="col-md-6" style="padding-left: 5px; padding-right: 5px;">

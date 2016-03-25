@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8eb0a6be-8574-44ef-a37d-0b053eaf29fb" solutionId="8eb0a6be-8574-44ef-a37d-0b053eaf29fb" resetWebServer="false" sharePointProductVersion="15.0" name="SPSignalrApp" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="Microsoft.Owin.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="bin\Debug\Microsoft.Owin.dll">
+      <safeControls>
+        <safeControl assemblyName="Microsoft.Owin" namespaceName="Microsoft.Owin" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Microsoft.Owin.Host.SystemWeb.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="bin\Debug\Microsoft.Owin.Host.SystemWeb.dll">
+      <safeControls>
+        <safeControl assemblyName="Microsoft.Owin.Host.SystemWeb" namespaceName="Microsoft.Owin.Host.SystemWeb" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Microsoft.Owin.Security.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="bin\Debug\Microsoft.Owin.Security.dll">
+      <safeControls>
+        <safeControl assemblyName="Microsoft.Owin.Security" namespaceName="Microsoft.Owin.Security" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Owin.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="bin\Debug\Owin.dll">
+      <safeControls>
+        <safeControl assemblyName="Owin" namespaceName="Owin" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Microsoft.AspNet.SignalR.Core.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="bin\Debug\Microsoft.AspNet.SignalR.Core.dll">
+      <safeControls>
+        <safeControl assemblyName="Microsoft.AspNet.SignalR.Core" namespaceName="Microsoft.AspNet.SignalR.Core" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Microsoft.AspNet.SignalR.SystemWeb.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll">
+      <safeControls>
+        <safeControl assemblyName="Microsoft.AspNet.SignalR.SystemWeb" namespaceName="Microsoft.AspNet.SignalR.SystemWeb" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Newtonsoft.Json.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="bin\Debug\Newtonsoft.Json.dll">
+      <safeControls>
+        <safeControl assemblyName="Newtonsoft.Json" namespaceName="Newtonsoft.Json" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+  </assemblies>
+  <projectItems>
+    <projectItemReference itemId="b2af26bb-f814-4814-8283-fd28c1bb96d9" />
+  </projectItems>
+</package>
