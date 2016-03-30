@@ -102,6 +102,16 @@ $(function () {
 
         marketReset: function () {
             return init();
+        },
+
+        marketTest: function (value) {
+            var result = JSON.parse(value);
+            $("#listitems").empty();
+            for (var i = 0; i < result.length; i++) {
+                $("#listitems").append("<div>" + result[i].Title + "</div>");
+            }
+            console.log(value);
+            return init();
         }
     });
 
@@ -129,6 +139,10 @@ $(function () {
 
             $("#reset").click(function () {
                 ticker.server.reset();
+            });
+
+            $("#test").click(function () {
+                ticker.server.test();
             });
         });
 });

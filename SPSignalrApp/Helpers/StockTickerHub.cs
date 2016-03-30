@@ -45,5 +45,15 @@ namespace Microsoft.AspNet.SignalR.StockTicker
         {
             _stockTicker.Reset();
         }
+
+        public void Test()
+        {
+            _stockTicker.Test();
+        }
+
+        public void UpdateTest()
+        {
+            _stockTicker.UpdateTest(null);
+        }
     }
 }

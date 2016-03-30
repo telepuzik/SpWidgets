@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="71db16fe-f5c6-4f56-b1c5-e102452ca4d3" solutionId="71db16fe-f5c6-4f56-b1c5-e102452ca4d3" resetWebServer="false" sharePointProductVersion="15.0" name="SPSignalrReceiver" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="ae2c852b-11d8-455b-9037-75de5f82b87b" />
+  </features>
+</package>

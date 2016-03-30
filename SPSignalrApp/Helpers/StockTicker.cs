@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading;
 using Microsoft.AspNet.SignalR.Hubs;
+using SPSignalrApp.Helpers;
 
 namespace Microsoft.AspNet.SignalR.StockTicker
 {
@@ -21,6 +22,7 @@ namespace Microsoft.AspNet.SignalR.StockTicker
         private readonly double _rangePercent = 0.002;
         
         private readonly TimeSpan _updateInterval = TimeSpan.FromMilliseconds(250);
+        private readonly TimeSpan _updateIntervalTest = TimeSpan.FromMilliseconds(2250);
         private readonly Random _updateOrNotRandom = new Random();
 
         private Timer _timer;
@@ -65,6 +67,9 @@ namespace Microsoft.AspNet.SignalR.StockTicker
                 if (MarketState != MarketState.Open)
                 {
                     _timer = new Timer(UpdateStockPrices, null, _updateInterval, _updateInterval);
+
+                    //_timer = new Timer(UpdateTest, null, _updateIntervalTest, _updateIntervalTest);
+                    UpdateTest(null);
 
                     MarketState = MarketState.Open;
 
@@ -185,6 +190,30 @@ namespace Microsoft.AspNet.SignalR.StockTicker
         {
             Clients.All.updateStockPrice(stock);
         }
+
+        public void UpdateTest(object state)
+        {
+            string query = "<Where>" +
+                    "</Where>" +
+                    "<OrderBy><FieldRef Name='Created' Ascending='False' /></OrderBy>" +
+                    "<RowLimit>5</RowLimit>";
+
+            var val = new SpHelper().GetSpItems("Lists/VJDListInstance", query);
+
+            BroadcastMarketTest(val);
+        }
+
+        public void Test()
+        {
+            BroadcastMarketTest(null);
+        }
+
+        private void BroadcastMarketTest(string val)
+        {
+            Clients.All.marketTest(val);
+        }
+
+       
     }
 
     public enum MarketState

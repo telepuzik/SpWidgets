@@ -79,6 +79,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
@@ -86,10 +88,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\AnotherStartup.cs" />
+    <Compile Include="Helpers\ListItems.cs" />
+    <Compile Include="Helpers\ListItemsHub.cs" />
+    <Compile Include="Helpers\SpHelper.cs" />
     <Compile Include="Helpers\Startup.cs" />
     <Compile Include="Helpers\Stock.cs" />
     <Compile Include="Helpers\StockTicker.cs" />
     <Compile Include="Helpers\StockTickerHub.cs" />
+    <Compile Include="Layouts\SPSignalrApp\ChatAppPage.aspx.cs">
+      <DependentUpon>ChatAppPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SPSignalrApp\ChatAppPage.aspx.designer.cs">
+      <DependentUpon>ChatAppPage.aspx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -110,8 +122,14 @@
     <Folder Include="Features\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Layouts\SPSignalrApp\ChatAppPage.aspx" />
+    <Content Include="Layouts\SPSignalrApp\ChatPage.html" />
+    <Content Include="Layouts\SPSignalrApp\ItemsList.html" />
     <Content Include="Layouts\SPSignalrApp\jquery-1.10.2.min.js" />
     <Content Include="Layouts\SPSignalrApp\jquery.color-2.1.2.min.js" />
+    <Content Include="Layouts\SPSignalrApp\Scripts\toastr.min.js" />
+    <Content Include="Layouts\SPSignalrApp\SignalR.Chat.js" />
+    <Content Include="Layouts\SPSignalrApp\SignalR.ItemsTicker.js" />
     <Content Include="Layouts\SPSignalrApp\SignalR.StockTicker.js" />
     <Content Include="Layouts\SPSignalrApp\StockTicker.css" />
     <Content Include="Layouts\SPSignalrApp\StockTicker.html" />
@@ -120,6 +138,7 @@
     <Content Include="Layouts\SPSignalrApp\Scripts\jquery-1.6.4.min.js" />
     <Content Include="Layouts\SPSignalrApp\Scripts\jquery.signalR-2.2.0.js" />
     <Content Include="Layouts\SPSignalrApp\Scripts\jquery.signalR-2.2.0.min.js" />
+    <Content Include="Layouts\SPSignalrApp\toastr.min.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
