@@ -13,8 +13,10 @@ namespace SPSignalrReceiver.SignalrRecevierVJD
         /// </summary>
         public override void ItemAdded(SPItemEventProperties properties)
         {
-            ListItems.Instance.NewItem("Новое " + properties.ListItem["ContentType"].ToString() + ": " + properties.ListItem["Title"].ToString());
-            ListItems.Instance.GetListData();
+            var userName = new SPFieldUserValue(properties.Web, properties.ListItem["Author"].ToString()).User.Name;
+            ListItems.Instance.NewEvent(new EventType().New,
+                    properties.ListItem["Title"].ToString(),
+                    properties.ListItem["ContentType"].ToString(), userName);
             base.ItemAdded(properties);
         }
 
@@ -23,8 +25,10 @@ namespace SPSignalrReceiver.SignalrRecevierVJD
         /// </summary>
         public override void ItemUpdated(SPItemEventProperties properties)
         {
-            ListItems.Instance.UpdatedItem("Изменено " + properties.ListItem["ContentType"].ToString() + ": " + properties.ListItem["Title"].ToString());
-            ListItems.Instance.GetListData();
+            var userName = new SPFieldUserValue(properties.Web, properties.ListItem["Author"].ToString()).User.Name;
+            ListItems.Instance.NewEvent(new EventType().Updated,
+                    properties.ListItem["Title"].ToString(),
+                    properties.ListItem["ContentType"].ToString(), userName);
             base.ItemUpdated(properties);
         }
 
@@ -33,8 +37,10 @@ namespace SPSignalrReceiver.SignalrRecevierVJD
         /// </summary>
         public override void ItemDeleting(SPItemEventProperties properties)
         {
-            ListItems.Instance.DeletedItem("Удалено " + properties.ListItem["ContentType"].ToString() + ": " + properties.ListItem["Title"].ToString());
-            ListItems.Instance.GetListData();
+            var userName = new SPFieldUserValue(properties.Web, properties.ListItem["Author"].ToString()).User.Name;
+            ListItems.Instance.NewEvent(new EventType().Deleted,
+                    properties.ListItem["Title"].ToString(),
+                    properties.ListItem["ContentType"].ToString(), userName);
             base.ItemDeleted(properties);
         }
 

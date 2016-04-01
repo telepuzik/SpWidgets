@@ -51,6 +51,16 @@
     <link href="/_Layouts/15/SPMainApp/styles/widgets.css" rel="stylesheet" />
     <%--<link href="/_Layouts/15/SPMainApp/styles/sharepoint2013-bootstrap3-reset.css" rel="stylesheet" />--%>
     
+    <%-- Signalr --%>
+    <script src="/_Layouts/15/SPSignalrApp/Scripts/jquery.signalR-2.2.0.js"></script>
+    <script src="/_Layouts/15/SPSignalrApp/Scripts/toastr.min.js"></script>
+
+    <link href="/_Layouts/15/SPSignalrApp/toastr.min.css" rel="stylesheet" />
+
+    <script src="/_Layouts/15/SPSignalrApp/SignalR.Chat.js"></script>
+
+    <script src="/signalr/hubs"></script>
+    
 
 	<SharePoint:CustomJSUrl runat="server" />
 	<SharePoint:SoapDiscoveryLink runat="server" />
@@ -398,16 +408,7 @@
                 <div class="tile webpart reportslist" style="height: 250px"></div>
             </div>
             <div class="col-md-6" style="padding-left: 5px; padding-right: 5px">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="tile webpart events"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="tile webpart events"></div>
-                    </div>
-                </div>
+                <div class="tile webpart chat" style="height: 250px"></div>
                 
             </div>
         </div>

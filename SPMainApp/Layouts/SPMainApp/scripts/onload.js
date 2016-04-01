@@ -24,7 +24,10 @@ $(function(){
         .photos({ name: "Фотографии"});
 
     $(".events")
-        .events({ name: "События"});
+        .events({ name: "События" });
+
+    $(".chat")
+        .chat({ name: "Чат" });
 
     $(".newemployees")
         .newemployees({ name: "Новые сотрудники"});

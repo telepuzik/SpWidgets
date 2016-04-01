@@ -108,6 +108,15 @@ function WgEventsCreate (element){
     element.events({ name: "События"});
 }
 
+function WgChatCreate(element) {
+    $.widget("custom.chat", {
+        _create: function() {
+        }
+    });
+
+    element.chat({ name: "Чат" });
+}
+
 function WgNewemployeesCreate (element) {
     $.widget ("custom.newemployees", {
         _create: function() {

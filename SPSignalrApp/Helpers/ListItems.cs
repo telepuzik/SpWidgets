@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.UI.WebControls;
 using Microsoft.AspNet.SignalR.Hubs;
 using SPSignalrApp.Helpers;
 
@@ -98,5 +99,37 @@ namespace Microsoft.AspNet.SignalR.ListItems
         {
             Clients.All.deletedListData(val);
         }
+
+        public void NewEvent(string eventType, string message, string messageContentType , string messageUser)
+        {
+            String resultString = eventType;
+            if (messageContentType == "Элемент")
+            {
+                resultString += " сообщение";
+            }
+            else
+            {
+                resultString += messageContentType;
+            }
+
+            resultString += " от " + messageUser;
+
+            resultString += ": " + message;
+
+            BroadcastNewEvent(eventType.ToString(), resultString);
+            GetChatData();
+        }
+
+        private void BroadcastNewEvent(string eventType, string message)
+        {
+            Clients.All.newEvent(eventType, message);
+        }
+    }
+
+    public class EventType
+    {
+        public string New => "Новое";
+        public string Updated => "Изменено";
+        public string Deleted => "Deleted";
     }
 }

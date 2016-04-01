@@ -28,6 +28,7 @@ namespace SPSignalrApp.Helpers
 
                     var currentList = currentSite.GetList(listUrl);
                     var newItem = currentList.GetItems().Add();
+
                     newItem["Title"] = message;
                     newItem.Update();
 
@@ -60,7 +61,10 @@ namespace SPSignalrApp.Helpers
                         {
                             foreach (SPListItem item in items)
                             {
-                                resultItems.Add(new Item {Title = item["Title"].ToString()});
+                                var userName = new SPFieldUserValue(currentSite, item["Author"].ToString()).User.Name;
+                                if (item["Title"] != null)
+                                    resultItems.Add(new Item { Title = userName + ": " + item["Title"].ToString() });
+
                             }
                             var jsSerializer = new JavaScriptSerializer();
                             var resultJson = jsSerializer.Serialize(resultItems);

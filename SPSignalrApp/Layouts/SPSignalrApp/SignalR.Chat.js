@@ -11,8 +11,7 @@
             hubInstance.server.getChatData();
 
             $("#update").click(function () {
-                //hubInstance.server.getChatData();
-                hubInstance.server.addChatMessage("test from server");
+                hubInstance.server.addChatMessage($("#text").val());
             });
         });
 
@@ -31,16 +30,18 @@
             }
         },
 
-        newListData: function (value) {
-            toastr.info(value);
-        },
-
-        updatedListData: function (value) {
-            toastr.success(value);
-        },
-
-        deletedListData: function (value) {
-            toastr.warning(value);
+        newEvent: function (eventType, value) {
+            switch (eventType) {
+                case "Новое":
+                    toastr.info(value);
+                    break;
+                case "Изменено":
+                    toastr.success(value);
+                    break;
+                case "Удалено":
+                    toastr.warning(value);
+                    break;
+            }
         }
     });
 

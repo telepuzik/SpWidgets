@@ -190,6 +190,16 @@ Widgets.prototype.Initialization = function () {
         }
     });
 
+    $.widget("custom.chat", {
+        
+        _create: function () {
+            this.element
+                .addClass("widget")
+                .append("<div id='listitems'></div><br/><br/><input type='button' id='update' value='Add message'/><input id='text' style='color: black' />");
+        }
+    });
+
+
     $.widget("custom.newemployees", {
         _create: function () {
             var name = this.options.name;

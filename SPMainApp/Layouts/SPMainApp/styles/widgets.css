@@ -197,6 +197,10 @@ h2, h3, .ms-h2, .ms-h3, .ms-headerFont {
     background-size: 90px 100%;
 }
 
+.widget.chat {
+    background-color: #477aa0 !important;
+}
+
 .widget.newemployees {
     background-color: #d5524a !important;
 }

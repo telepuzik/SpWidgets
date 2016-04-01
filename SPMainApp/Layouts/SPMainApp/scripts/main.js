@@ -76,6 +76,11 @@ function LoadTest() {
     });
 
     //
+    $(".chat").each(function () {
+        $(this).chat({ name: "Чат" });
+    });
+
+    //
     $(".newemployees").each(function () {
         $(this).newemployees({ name: "Новые сотрудники" });
     });
