@@ -189,7 +189,7 @@ Widgets.prototype.Initialization = function () {
                 });
         }
     });
-
+     
     $.widget("custom.chat", {
         
         _create: function () {
